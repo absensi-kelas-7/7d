@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>7D SMPKUBA - PANEL RESMI</title>
+<title>7D - LOGIN FIX</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;color:#fff;font-family:Arial Black;min-height:100vh;display:flex;justify-content:center;padding:16px}
@@ -13,22 +13,20 @@ body{background:#000;color:#fff;font-family:Arial Black;min-height:100vh;display
 #card{background:#fff;color:#000;border-radius:26px;overflow:hidden;border:4px solid #000;box-shadow:0 0 60px rgba(124,58,237,0.6)}
 #top{background:#e10600;padding:20px;text-align:center}
 #top h1{color:#fff;font-size:42px;letter-spacing:4px;text-shadow:3px 3px 0 #000;line-height:0.9}
-#top p{color:#fff;font-size:11px;letter-spacing:3px;margin-top:4px}
 #mid{padding:18px;text-align:center;border-top:4px solid #000;border-bottom:4px solid #000}
 #graffiti{font-family:Impact;font-size:40px;color:#2e1065;transform:rotate(-3deg) skew(-5deg);text-shadow:3px 3px 0 #fff,7px 7px 0 #1e1b4b;line-height:0.9}
-#quote{font-family:Arial;font-size:9px;font-weight:900;color:#555;margin-top:8px;font-style:italic}
 #content{padding:16px;background:#f5f5f5}
-.sosBtn{width:100%;display:flex;align-items:center;gap:12px;padding:15px;border:3.5px solid #000;border-radius:18px;margin-bottom:11px;font-weight:900;text-decoration:none;color:#000;background:#fff;box-shadow:0 5px 0 #000;transition:0.1s;cursor:pointer}
-.sosBtn:active{transform:translateY(3px);box-shadow:0 2px 0 #000}
+.sosBtn{width:100%;display:flex;align-items:center;gap:12px;padding:15px;border:3.5px solid #000;border-radius:18px;margin-bottom:11px;font-weight:900;text-decoration:none;color:#000;background:#fff;box-shadow:0 5px 0 #000;cursor:pointer}
 .icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid #000;flex-shrink:0}
 .ig{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);color:#fff}
-.tiktok{background:#000;color:#fff} .wa{background:#25D366;color:#fff} .absen{background:#e10600;color:#fff} .yt{background:#ff0000;color:#fff}
-#playBtn{position:fixed;bottom:16px;right:16px;z-index:20;background:#fff;color:#000;border:3px solid #000;border-radius:999px;padding:10px 14px;font-weight:900;font-size:11px;cursor:pointer;box-shadow:0 4px 0 #000}
+.tiktok{background:#000;color:#fff} .wa{background:#25D366;color:#fff} .absen{background:#e10600;color:#fff}
+#playBtn{position:fixed;bottom:16px;right:16px;z-index:20;background:#fff;color:#000;border:3px solid #000;border-radius:999px;padding:10px 14px;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #000}
 #loginOverlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.93);display:flex;align-items:center;justify-content:center;padding:16px}
 #loginBox{width:100%;max-width:360px;background:#fff;border-radius:22px;border:4px solid #000;padding:22px;text-align:center}
 #loginInput{width:100%;padding:13px;border:3px solid #000;border-radius:12px;font-weight:900;font-family:Arial;text-align:center;margin-bottom:10px;text-transform:uppercase}
 #loginBtn{width:100%;padding:12px;background:#000;color:#fff;border-radius:999px;font-weight:900;border:3px solid #000;cursor:pointer}
 #loginError{font-family:Arial;font-size:10px;color:#e10600;font-weight:900;margin-top:8px;display:none}
+#debug{font-family:Arial;font-size:8px;color:#999;margin-top:8px}
 </style>
 </head>
 <body>
@@ -37,10 +35,11 @@ body{background:#000;color:#fff;font-family:Arial Black;min-height:100vh;display
 <div id="loginOverlay">
 <div id="loginBox">
 <h2>🔐 LOGIN 7D</h2>
-<p style="font-family:Arial;font-size:11px;color:#666;font-weight:700;margin-bottom:12px">MASUKIN NAMA LU SESUAI ABSEN!</p>
-<input id="loginInput" type="text" placeholder="CONTOH: ARA">
+<p style="font-family:Arial;font-size:11px;color:#666;font-weight:700;margin-bottom:12px">KETIK NAMA LU - 25 SISWA</p>
+<input id="loginInput" type="text" placeholder="KETIK: RIDWAN" autocomplete="off" autofocus>
 <button id="loginBtn" onclick="doLogin()">MASUK →</button>
 <div id="loginError"></div>
+<div id="debug">Coba ketik: Ridwan / Irfan / Rahmat / Bayu</div>
 </div>
 </div>
 
@@ -50,32 +49,95 @@ body{background:#000;color:#fff;font-family:Arial Black;min-height:100vh;display
 
 <div id="wrap">
 <div id="card">
-<div id="top"><h1>HELLO</h1><p>PANEL SOSMED 7D</p></div>
-<div id="mid"><div id="graffiti">sevennde<br>smpkuba</div><div id="quote">vibes pulang pagi bawa casan + mata ngantuk adalah momen terindah di usia remaja</div></div>
+<div id="top"><h1>HELLO</h1><p>7D BERHASIL LOGIN!</p></div>
+<div id="mid"><div id="graffiti">sevennde<br>smpkuba</div></div>
 <div id="content">
-<div style="font-family:Arial;font-size:10px;font-weight:900;margin-bottom:8px" id="welcome">LINK RESMI KELAS 7D 👇</div>
-<a class="sosBtn" href="https://www.instagram.com/" target="_blank" onclick="playClick()"><div class="icon ig">📸</div><div><div>Instagram 7D</div><div style="font-family:Arial;font-size:10px;color:#666">@sevennde.smpkuba</div></div></a>
-<a class="sosBtn" href="https://www.tiktok.com/search?q=7d%20smpkuba" target="_blank" onclick="playClick()"><div class="icon tiktok">🎵</div><div><div>TikTok 7D</div><div style="font-family:Arial;font-size:10px;color:#666">Tap - akun nyusul</div></div></a>
-<a class="sosBtn" href="https://wa.me/6285815915723?text=Halo%20mau%20join%20grup%207D" target="_blank" onclick="playClick()"><div class="icon wa">💬</div><div><div>Grup WA 7D</div><div style="font-family:Arial;font-size:10px;color:#666">Chat admin buat join</div></div></a>
-<a class="sosBtn" href="https://absensi-kelas-7.github.io/absensi/" target="_blank" onclick="playClick()"><div class="icon absen">📋</div><div><div>Absensi 7D</div><div style="font-family:Arial;font-size:10px;color:#666">Sakit / Izin</div></div></a>
-<a class="sosBtn" href="https://youtube.com/" target="_blank" onclick="playClick()"><div class="icon yt">▶️</div><div><div>YouTube 7D</div><div style="font-family:Arial;font-size:10px;color:#666">Coming soon</div></div></a>
-<div style="text-align:center;font-family:Arial;font-size:8px;color:#999;margin-top:10px"><span id="userInfo"></span><br><a href="#" onclick="logout()" style="color:#e10600;font-weight:900">LOGOUT</a></div>
+<div style="font-family:Arial;font-size:12px;font-weight:900;margin-bottom:10px" id="welcome">LINK RESMI 👇</div>
+<a class="sosBtn" href="https://www.instagram.com/" target="_blank" onclick="playClick()"><div class="icon ig">📸</div><div>Instagram 7D</div></a>
+<a class="sosBtn" href="https://www.tiktok.com/search?q=7d%20smpkuba" target="_blank" onclick="playClick()"><div class="icon tiktok">🎵</div><div>TikTok 7D</div></a>
+<a class="sosBtn" href="https://absensi-kelas-7.github.io/absensi/" target="_blank" onclick="playClick()"><div class="icon absen">📋</div><div>Absensi 7D</div></a>
+<div style="text-align:center;margin-top:10px"><span id="userInfo" style="font-family:Arial;font-size:10px"></span><br><a href="#" onclick="logout()" style="color:#e10600;font-weight:900;font-family:Arial;font-size:10px">LOGOUT</a></div>
 </div>
 </div>
 </div>
+
 <script>
-// === EDIT NAMA SISWA DISINI PUNG - KATA KUNCI = NAMA SISWA ===
-const DAFTAR_SISWA=["Ridwan","Rahmat","Varo","Irfan","Jaki","Adiasta","Bayu","Fikri","Riski","Zidan","Azka","Farel","Azril","Rehan","Sasi","Vivi","Aqila","Elmira","Putri","Nayla","Cila","Piev","Azwa","Darin","Dafa","];
-const audio=document.getElementById('audio');const clickSound=document.getElementById('clickSound');const playBtn=document.getElementById('playBtn');
-audio.volume=0.3;clickSound.volume=0.35;let isPlaying=false;
-function playClick(){clickSound.currentTime=0;clickSound.play().catch(()=>{});}
-function tryPlay(){audio.volume=0.3;audio.play().then(()=>{isPlaying=true;playBtn.textContent='🔊';}).catch(()=>{});}
+// === DAFTAR 25 SISWA - 1 BARIS 1 NAMA ===
+const DAFTAR_SISWA=[
+"Ridwan",
+"Rahmat",
+"Varo",
+"Irfan",
+"Jaki",
+"Adiasta",
+"Bayu",
+"Fikri",
+"Riski",
+"Zidan",
+"Azka",
+"Farel",
+"Azril",
+"Rehan",
+"Sasi",
+"Vivi",
+"Aqila",
+"Elmira",
+"Putri",
+"Nayla",
+"Cila",
+"Piev",
+"Azwa",
+"Darin",
+"Dafa"
+];
+
+const audio=document.getElementById('audio');
+const clickSound=document.getElementById('clickSound');
+const playBtn=document.getElementById('playBtn');
+audio.volume=0.3; clickSound.volume=0.35;
+let isPlaying=false;
+
+function playClick(){clickSound.currentTime=0; clickSound.play().catch(()=>{});}
+function tryPlay(){audio.volume=0.3; audio.play().then(()=>{isPlaying=true; playBtn.textContent='🔊';}).catch(()=>{});}
 document.body.addEventListener('click',tryPlay,{once:true});
-function toggleMusic(){playClick();if(isPlaying){audio.pause();isPlaying=false;playBtn.textContent='🔇';}else{audio.volume=0.3;audio.play();isPlaying=true;playBtn.textContent='🔊';}}
-if(localStorage.getItem('7D_LOGIN')==='OK'){document.getElementById('loginOverlay').style.display='none';document.getElementById('welcome').textContent='HALO '+localStorage.getItem('7D_USER')+'! 👇';document.getElementById('userInfo').textContent='Login: '+localStorage.getItem('7D_USER');}
-function doLogin(){playClick();let input=document.getElementById('loginInput').value.trim().toUpperCase();let err=document.getElementById('loginError');if(!input){err.textContent='❌ Masukin nama dulu!';err.style.display='block';return;}let ok=DAFTAR_SISWA.includes(input)||DAFTAR_SISWA.some(n=>input.includes(n)||n.includes(input));if(ok){localStorage.setItem('7D_LOGIN','OK');localStorage.setItem('7D_USER',input);document.getElementById('loginOverlay').style.display='none';document.getElementById('welcome').textContent='HALO '+input+'! 👇';document.getElementById('userInfo').textContent='Login: '+input;tryPlay();}else{err.textContent='❌ "'+input+'" gak ada di daftar!';err.style.display='block';setTimeout(()=>err.style.display='none',2500);}}
-function logout(){playClick();localStorage.clear();location.reload();}
+function toggleMusic(){playClick(); if(isPlaying){audio.pause();isPlaying=false;playBtn.textContent='🔇';}else{audio.volume=0.3;audio.play();isPlaying=true;playBtn.textContent='🔊';}}
+
+function normalize(str){ return str.trim().toLowerCase().replace(/\s+/g,''); }
+
+if(localStorage.getItem('7D_LOGIN')==='OK'){
+  let saved=localStorage.getItem('7D_USER');
+  document.getElementById('loginOverlay').style.display='none';
+  document.getElementById('welcome').textContent='HALO '+saved.toUpperCase()+'! 👇';
+  document.getElementById('userInfo').textContent='Login: '+saved;
+}
+
+function doLogin(){
+  playClick();
+  let inputRaw=document.getElementById('loginInput').value;
+  let err=document.getElementById('loginError');
+  let input=normalize(inputRaw);
+  
+  if(!input){ err.textContent='❌ Masukin nama dulu jir!'; err.style.display='block'; return; }
+
+  let found = DAFTAR_SISWA.find(n => normalize(n) === input);
+  
+  if(found){
+    localStorage.setItem('7D_LOGIN','OK');
+    localStorage.setItem('7D_USER',found);
+    document.getElementById('loginOverlay').style.display='none';
+    document.getElementById('welcome').textContent='HALO '+found.toUpperCase()+'! 👇';
+    document.getElementById('userInfo').textContent='Login: '+found;
+    tryPlay();
+  }else{
+    err.innerHTML='❌ "'+inputRaw+'" gak ada!<br>Coba: Ridwan, Irfan, Bayu, Rahmat';
+    err.style.display='block';
+    document.getElementById('debug').textContent='Kamu ketik: "'+inputRaw+'" -> jadi "'+input+'" | Daftar: '+DAFTAR_SISWA.join(', ').toLowerCase();
+    if(navigator.vibrate) navigator.vibrate([100,50,100]);
+    setTimeout(()=>{err.style.display='none';},4000);
+  }
+}
+function logout(){localStorage.clear();location.reload();}
 document.getElementById('loginInput').addEventListener('keypress',e=>{if(e.key==='Enter')doLogin();});
 </script>
 </body>
-  </html>
+</html>
